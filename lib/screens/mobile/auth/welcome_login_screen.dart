@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sellio/constants/colors.dart';
+import 'package:sellio/screens/web/Home/homeScreen.dart';
 
 import '../../../utils/custom_textform_field.dart';
 
@@ -91,7 +92,9 @@ class _MobileLoginUIState extends State<MobileLoginUI> {
           SizedBox(
             width: 550,
             child: MaterialButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context)=> HomeScreen()));
+              },
               color: AppColors.buttonColor,
               height: 50,
               shape: RoundedRectangleBorder(
