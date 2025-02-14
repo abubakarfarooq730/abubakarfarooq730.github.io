@@ -13,9 +13,9 @@ class ResponsiveLayoutScreen extends StatelessWidget {
       body: LayoutBuilder(
         builder: (context, constraints) {
           if (constraints.maxWidth > 768) {
-            return WebLoginUI();
+            return const WebLoginUI();
           } else {
-            return MobileLoginUI();
+            return const MobileLoginUI();
           }
         },
       ),

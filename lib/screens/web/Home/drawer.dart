@@ -4,10 +4,9 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:sellio/constants/colors.dart';
 
 class MyDrawer extends StatelessWidget {
-  final Function(int) onSelectItem; // Callback for item selection
-  final int selectedIndex; // Currently selected index
-
-  MyDrawer({required this.onSelectItem, required this.selectedIndex});
+  final Function(int) onSelectItem;
+  final int selectedIndex;
+  const MyDrawer({super.key, required this.onSelectItem, required this.selectedIndex});
 
   @override
   Widget build(BuildContext context) {
@@ -254,11 +253,11 @@ class MyDrawer extends StatelessWidget {
                 color: Colors.grey.withOpacity(0.5),
                 spreadRadius: 1,
                 blurRadius: 5,
-                offset: Offset(0, 3),
+                offset: const Offset(0, 3),
               ),
             ],
           ),
-          padding: EdgeInsets.all(6),
+          padding: const EdgeInsets.all(6),
           child: Icon(
             icon,
             color: isSelected ? AppColors.buttonColor : AppColors.blackColor,
@@ -294,11 +293,11 @@ class MyDrawer extends StatelessWidget {
               color: Colors.grey.withOpacity(0.5),
               spreadRadius: 1,
               blurRadius: 5,
-              offset: Offset(0, 3), // Shadow positioning
+              offset: const Offset(0, 3),
             ),
           ],
         ),
-        padding: EdgeInsets.all(6), // Adjust padding for better icon spacing
+        padding: const EdgeInsets.all(6),
         child: Icon(
           icon,
           color: AppColors.blackColor,
@@ -309,186 +308,32 @@ class MyDrawer extends StatelessWidget {
     );
   }
 }
-class DashboardScreen extends StatelessWidget {
-  const DashboardScreen({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(appBar: AppBar(title: Text("Dashboard")), body: Center(child: Text("Dashboard Screen")));
-  }
-}
 
-class EmployeesScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(appBar: AppBar(title: Text("Employees")), body: Center(child: Text("Employees Screen")));
-  }
-}
 
-class RolesScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(appBar: AppBar(title: Text("Roles")), body: Center(child : Text("Roles Screen")));
-  }
-}
 
-class CustomerScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(appBar: AppBar(title: Text("Customer")), body: Center(child: Text("Customer Screen")));
-  }
-}
 
-class ProductsScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(appBar: AppBar(title: Text("Products")), body: Center(child: Text("Products Screen")));
-  }
-}
 
-class CategoriesScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(appBar: AppBar(title: Text("Categories")), body: Center(child: Text("Categories Screen")));
-  }
-}
 
-class BrandsScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(appBar: AppBar(title: Text("Brands")), body: Center(child: Text("Brands Screen")));
-  }
-}
 
-class DiscountsScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(appBar: AppBar(title: Text("Discounts")), body: Center(child: Text("Discounts Screen")));
-  }
-}
 
-class TaxScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(appBar: AppBar(title: Text("Tax")), body: Center(child: Text("Tax Screen")));
-  }
-}
 
-class UnitScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(appBar: AppBar(title: Text("Unit")), body: Center(child: Text("Unit Screen")));
-  }
-}
 
-class SuppliersScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(appBar: AppBar(title: Text("Suppliers")), body: Center(child: Text("Suppliers Screen")));
-  }
-}
 
-class PurchasesScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(appBar: AppBar(title: Text("Purchases")), body: Center(child: Text("Purchases Screen")));
-  }
-}
 
-class CornStoreScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(appBar: AppBar(title: Text("Corn Store")), body: Center(child: Text("Corn Store Screen")));
-  }
-}
 
-class EmptyCylinderScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(appBar: AppBar(title: Text("Empty Cylinder")), body: Center(child: Text("Empty Cylinder Screen")));
-  }
-}
 
-class CylinderScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(appBar: AppBar(title: Text("Cylinder")), body: Center(child: Text("Cylinder Screen")));
-  }
-}
 
-class CylinderStockScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(appBar: AppBar(title: Text("Cylinder Stock")), body: Center(child: Text("Cylinder Stock Screen")));
-  }
-}
 
-class SalesScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(appBar: AppBar(title: Text("Sales")), body: Center(child: Text("Sales Screen")));
-  }
-}
 
-class QuotationsScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(appBar: AppBar(title: Text("Quotations")), body: Center(child: Text("Quotations Screen")));
-  }
-}
 
-class SalesReturnScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(appBar: AppBar(title: Text("Sales Return")), body: Center(child: Text("Sales Return Screen")));
-  }
-}
 
-class PurchaseReturnScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(appBar: AppBar(title: Text("Purchase Return")), body: Center(child: Text("Purchase Return Screen")));
-  }
-}
 
-class ExpensesScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(appBar: AppBar(title: Text("Expenses")), body: Center(child: Text("Expenses Screen")));
-  }
-}
 
-class ExpenseCategoriesScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(appBar: AppBar(title: Text("Expense Categories")), body: Center(child: Text("Expense Categories Screen")));
-  }
-}
 
-class ReportsScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(appBar: AppBar(title: Text("Reports")), body: Center(child: Text("Reports Screen")));
-  }
-}
 
-class WarehousesScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(appBar: AppBar(title: Text("Warehouses")), body: Center(child: Text ("Warehouses Screen")));
-  }
-}
 
-class InventoryScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(appBar: AppBar(title: Text("Inventory")), body: Center(child: Text("Inventory Screen")));
-  }
-}
 
-class SettingsScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(appBar: AppBar(title: Text("Settings")), body: Center(child: Text("Settings Screen")));
-  }
-}
+
+
+
